@@ -1,14 +1,17 @@
+
 import 'package:flutter/material.dart';
+import 'custom_text.dart';
+import 'custom_button.dart';
 
 // Widgets are the components that make up the UI of an app
 // The "lego bricks" of an app
+
 void clicked() {
   print("Button Clicked");
 }
 
-// main function will process the code inside it into machine code
+// main function starts the app
 void main() {
-  // runApp() is the starting point of every app & it tells your phone to start rendering the app
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -31,32 +34,12 @@ void main() {
               end: Alignment.bottomRight,
             ),
           ),
-          child: Center(
+          child: const Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  "Zeti So Beautiful Gorgeous",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 23, 9, 13),
-                    fontSize: 50,
-                    fontFamily: "Royal Acid",
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                TextButton(
-                  onPressed: clicked,
-                  child: const Text(
-                    "Click Me",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 23, 9, 13),
-                      fontSize: 30,
-                      fontFamily: "Royal Acid",
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
-                ),
+                CustomText("Zeti So Beautiful Gorgeous"),
+                CustomButton(),
               ],
             ),
           ),
